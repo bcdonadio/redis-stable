@@ -1,0 +1,25 @@
+From c106e8adc71535b70db19349b0ba16acb29d1bd1 Mon Sep 17 00:00:00 2001
+From: Bernardo Donadio <bcdonadio@bcdonadio.com>
+Date: Tue, 21 Feb 2017 02:15:16 +0000
+Subject: [PATCH 6/6] redis 3.2.8: geohash library fPIC performance tuning
+
+---
+ deps/geohash-int/Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/deps/geohash-int/Makefile b/deps/geohash-int/Makefile
+index b7c2595..d8b5b40 100644
+--- a/deps/geohash-int/Makefile
++++ b/deps/geohash-int/Makefile
+@@ -2,7 +2,7 @@ STD=
+ WARN= -Wall
+ OPT= -O2
+ 
+-R_CFLAGS= $(STD) $(WARN) $(OPT) $(DEBUG) $(CFLAGS)
++R_CFLAGS= $(STD) $(WARN) $(OPT) $(DEBUG) $(CFLAGS) -fPIC
+ R_LDFLAGS= $(LDFLAGS)
+ DEBUG= -g
+ 
+-- 
+2.9.3
+
