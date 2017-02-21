@@ -12,7 +12,7 @@
 
 Name:              redis
 Version:           3.2.8
-Release:           1%{?dist}
+Release:           2%{?dist}
 Summary:           A persistent key-value database
 License:           BSD
 URL:               http://redis.io
@@ -173,6 +173,9 @@ ln -sf %{name}-server %{buildroot}%{_bindir}/%{name}-sentinel
 # Install redis-shutdown
 install -pDm755 %{S:7} %{buildroot}%{_bindir}/%{name}-shutdown
 
+# Install redis-trib.rb cluster script
+install -pDm755 src/redis-trib.rb %{buildroot}%{_bindir}/%{name}-trib.rb
+
 %check
 %if 0%{?with_tests}
 make test ||:
@@ -245,6 +248,9 @@ fi
 %endif
 
 %changelog
+* Tue Feb 21 2017 Bernardo Donadio <bcdonadio@bcdonadio.com> - 3.2.8-2
+- Install redis-trib.rb script
+
 * Tue Feb 21 2017 Bernardo Donadio <bcdonadio@bcdonadio.com> - 3.2.8-1
 - Upstream 3.2.8
 - Add fPIC on geohash-int dep
