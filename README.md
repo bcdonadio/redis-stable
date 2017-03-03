@@ -1,5 +1,8 @@
 # Redis Stable for Enterprise Linux
 
+<a href="https://packagecloud.io/redis/redis-stable"><img alt="Hosted repo for redis-stable RPMs | packagecloud" height="46" src="https://packagecloud.io/images/packagecloud-badge.png" width="158" /></a>
+<a href="https://github.com/bcdonadio/redis-stable"><img alt="Scripts for building Redis Stable for Enterprise Linux 6 and 7 | github" height="46" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png" /></a>
+
 This project contains a set of scripts and dockerfiles (recipes) to build, sign
 and push to PackageCloud.io a distribution of Redis following the official
 Redis.io stable channel, instead of lagging behing with the EPEL-provided (but
