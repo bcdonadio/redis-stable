@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-REPO="redis-stable/mainline"
+REPO="redis/redis-stable"
 DIST="el"
 VERSIONS="7 6"
 
